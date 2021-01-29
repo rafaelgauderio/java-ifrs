@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\Users\DeLuca Tigrao\Desktop\java orientada a objetos\ws-ifrs\.metadata\.plugins\org.eclipse.jdt.core
-2328617290.index
-113558702.index
