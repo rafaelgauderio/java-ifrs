@@ -1,11 +1,11 @@
-package exercicio1;
+package exercicio6;
 
 public class Funcionario {
 
 	private String nome;
 	private String departamento;
 	private double salario;
-	private String dataEntrada;
+	private Data dataEntrada;
 	private String rg;
 	private boolean estaNaEmpresa;
 
@@ -21,7 +21,7 @@ public class Funcionario {
 	}
 
 	// construtor com argumento
-	public Funcionario(String nome, String departamento, double salario, String dataEntrada, String rg,
+	public Funcionario(String nome, String departamento, double salario, Data dataEntrada, String rg,
 			boolean estaNaEmpresa) {
 		super();
 		this.nome = nome;
@@ -56,11 +56,11 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public String getDataEntrada() {
+	public Data getDataEntrada() {
 		return dataEntrada;
 	}
 
-	public void setDataEntrada(String dataEntrada) {
+	public void setDataEntrada(Data dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
 
@@ -115,24 +115,6 @@ public class Funcionario {
 				+ "\nSalario: " + String.format("R$%.2f", this.salario) + "\nData de Entrada: " + this.dataEntrada
 				+ "\nRG: " + this.rg + "\nFuncionário está trabalhando na empresa: " + this.estaNaEmpresa);
 
-	}
-
-	public boolean igual(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Funcionario outro = (Funcionario) obj;
-		if (nome == null) {
-			if (outro.nome != null)
-				return false;
-		} else if (!nome.equals(outro.nome))
-			return false;
-		if (Double.doubleToLongBits(salario) != Double.doubleToLongBits(outro.salario))
-			return false;
-		return true;
 	}
 
 }

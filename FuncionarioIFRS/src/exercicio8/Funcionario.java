@@ -1,11 +1,11 @@
-package exercicio1;
+package exercicio8;
 
 public class Funcionario {
 
 	private String nome;
 	private String departamento;
 	private double salario;
-	private String dataEntrada;
+	private Data dataEntrada;
 	private String rg;
 	private boolean estaNaEmpresa;
 
@@ -21,7 +21,7 @@ public class Funcionario {
 	}
 
 	// construtor com argumento
-	public Funcionario(String nome, String departamento, double salario, String dataEntrada, String rg,
+	public Funcionario(String nome, String departamento, double salario, Data dataEntrada, String rg,
 			boolean estaNaEmpresa) {
 		super();
 		this.nome = nome;
@@ -56,11 +56,11 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public String getDataEntrada() {
+	public Data getDataEntrada() {
 		return dataEntrada;
 	}
 
-	public void setDataEntrada(String dataEntrada) {
+	public void setDataEntrada(Data dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
 
@@ -112,7 +112,7 @@ public class Funcionario {
 
 	public void mostra() {
 		System.out.println("DADOS FO FUNCIONÁRIO\nNome: " + this.nome + "\nDepartamento: " + this.departamento
-				+ "\nSalario: " + String.format("R$%.2f", this.salario) + "\nData de Entrada: " + this.dataEntrada
+				+ "\nSalario: " + String.format("R$%.2f", this.salario) + "\nData de Entrada: " + this.dataEntrada.formatada()
 				+ "\nRG: " + this.rg + "\nFuncionário está trabalhando na empresa: " + this.estaNaEmpresa);
 
 	}
@@ -135,4 +135,5 @@ public class Funcionario {
 		return true;
 	}
 
+	
 }
