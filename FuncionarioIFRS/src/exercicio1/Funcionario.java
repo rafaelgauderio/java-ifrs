@@ -111,7 +111,7 @@ public class Funcionario {
 	}
 
 	public void mostra() {
-		System.out.println("DADOS FO FUNCIONÁRIO\nNome: " + this.nome + "\nDepartamento: " + this.departamento
+		System.out.println("DADOS DO FUNCIONÁRIO\nNome: " + this.nome + "\nDepartamento: " + this.departamento
 				+ "\nSalario: " + String.format("R$%.2f", this.salario) + "\nData de Entrada: " + this.dataEntrada
 				+ "\nRG: " + this.rg + "\nFuncionário está trabalhando na empresa: " + this.estaNaEmpresa);
 
