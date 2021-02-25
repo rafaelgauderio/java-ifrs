@@ -27,6 +27,11 @@ public class Aplicacao {
 		tcc.setVersao(1);
 		tcc.setAluno(rafael);
 		tcc.setOrientador(carlos);
+		
+		/*Fiz várias Strings para cada paráfrafo de cada item de TCC (introducao1, introducao2, testes1...) e depois
+		*concatenar os mesmos em uma lista ou em uma Classe chamada Tccconteudo, mas interessante que criar um vetor, pois
+		*não tem como saber de antemão quantos parágrafos vai ter cada item do TCC.
+		*/
 
 		String titulo = "Trabalho de conclusão sobre circuitos lógicos";
 		String introducao1 = "INTRODUÇÃO\nO trabalho de conclusão refere-se a uma análise sobre circuitos lógicos digitais.";
@@ -45,14 +50,16 @@ public class Aplicacao {
 		conteudo.add(testes2);
 		conteudo.add(conclusao1);
 
-		// Imprimendo os dados do TCC (dados do aluno e Orientador)
+		// Imprimindo os dados do TCC (dados do aluno e Orientador)i
 		System.out.println(tcc);
 
+		//Chamandos os métodos criados na classe Aluno
 		rafael.entregarEtapa();
 		rafael.atualizarCronograma();
 		rafael.AvisarProfessor();
 		tcc.setVersao(3);
 
+		//Imprimindo dados após a alteração de versão
 		System.out.println(tcc);
 
 		// Imprimindo o conteudo do TCC via ArrayList
@@ -60,8 +67,14 @@ public class Aplicacao {
 			System.out.println(conteudo.get(i));
 		}
 
-		// Imprimndo utilizando a classe TccConteudo
-		TccConteudo conteudoTcc = new TccConteudo(introducao1, objetivo1, desenvolvimento1, testes1, conclusao1);
+		// Setando itens do TCC e Imprimindo utilizando a classe TccConteudo
+		ConteudoTcc conteudoTcc = new ConteudoTcc();
+		conteudoTcc.setIntroducao(introducao1);
+		conteudoTcc.setObjetivo(objetivo1);
+		conteudoTcc.setDesenvolvimento(desenvolvimento1);
+		conteudoTcc.setTestes(testes1+"\n"+testes2);
+		conteudoTcc.setConclusao(conclusao1);
+		
 		System.out.println(conteudoTcc);
 
 	}

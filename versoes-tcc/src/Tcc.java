@@ -4,7 +4,7 @@ public class Tcc {
 	private int versao;
 	private Aluno aluno;
 	private Orientador orientador;
-	private TccConteudo conteudo;
+	private ConteudoTcc conteudo;
 
 	// construtor vazio
 	public Tcc() {
@@ -18,7 +18,7 @@ public class Tcc {
 		this.orientador = orientador;
 	}
 
-	public Tcc(int versao, Aluno aluno, Orientador orientador, TccConteudo conteudo) {
+	public Tcc(int versao, Aluno aluno, Orientador orientador, ConteudoTcc conteudo) {
 		super();
 		this.versao = versao;
 		this.aluno = aluno;
@@ -56,11 +56,11 @@ public class Tcc {
 		this.orientador = orientador;
 	}
 
-	public TccConteudo getConteudo() {
+	public ConteudoTcc getConteudo() {
 		return conteudo;
 	}
 
-	public void setConteudo(TccConteudo conteudo) {
+	public void setConteudo(ConteudoTcc conteudo) {
 		this.conteudo = conteudo;
 	}
 
