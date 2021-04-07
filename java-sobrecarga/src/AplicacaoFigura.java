@@ -16,7 +16,7 @@ public class AplicacaoFigura {
 		
 		System.out.println(obj);
 		System.out.println(fig);
-		System.out.println(obj2);		
+		System.out.println(obj2);			
 		System.out.println(ret);
 		
 		
