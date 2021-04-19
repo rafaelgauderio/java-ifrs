@@ -1,4 +1,3 @@
-
 public class Doces extends Produto {
 
 	private String nome;
